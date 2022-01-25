@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  
+  mysql:
+    container_name: "chatsystem-mysql-c"
+    image: mysql:5.7.34
+    environment:
+      - MYSQL_ROOT_PASSWORD=verysecret
+      - MYSQL_PASSWORD=verysecret
+      - MYSQL_DATABASE=chatsystem
+    ports:
+      - "3306:3306"
+    volumes:
+      - chatsystem-mysql-data:/var/lib/mysql
+
+  redis:
+    image: 'redis:alpine'
+    command: redis-server
+    ports:
+      - '6379:6379'
+
+
+volumes:
+  chatsystem-mysql-data:
