@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2022_01_24_155906) do
     t.integer "chats_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["token"], name: "index_chat_applications_on_token", unique: true
   end
 
   create_table "chats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 2022_01_24_155906) do
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "chat_id"
     t.integer "chat_message_number", null: false
+    t.string "body", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chat_id", "chat_message_number"], name: "idx_chat_message", unique: true
