@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
         # Redis table: {token,last_chat_number}
         creationMessageNumber = new_message_number
         MessageCreationJob.perform_later(@chat[:id],creationMessageNumber,message_params[:body])
-        render json: {messageNumber: new_message_number}, status: :created
+        render json: {messageNumber: creationMessageNumber}, status: :created
     end
 
     def show
@@ -39,8 +39,9 @@ class MessagesController < ApplicationController
     end
 
     def new_message_number
-        lastChatMessage = @chat.messages.last
-        newMessageNumber = (lastChatMessage.nil?) ? 1 : lastChatMessage[:chat_message_number] + 1
+        REDIS.multi do |transaction|
+            transaction.incr message_params[:token]+"/"+@chat[:application_chat_number].to_s
+        end [0]
     end
 
     def message_params

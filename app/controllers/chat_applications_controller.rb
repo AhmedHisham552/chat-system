@@ -7,7 +7,6 @@ class ChatApplicationsController < ApplicationController
     end
 
     def create
-        # Should create a token and enqueue a new job for creating the application and return the token to the client
         appToken = ::SecureRandom.uuid
         ApplicationCreationJob.perform_later(appToken,params[:name])
         render json: {token: appToken}, status: :created
