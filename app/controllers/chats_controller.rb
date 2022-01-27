@@ -17,8 +17,7 @@ class ChatsController < ApplicationController
     end
     
     def destroy
-        # Should enqueue a job for destroying the record
-        @chat.destroy
+        ChatDeletionJob.perform_later(@chat)
         render status: :ok
     end
 

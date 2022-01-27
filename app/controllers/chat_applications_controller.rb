@@ -18,7 +18,7 @@ class ChatApplicationsController < ApplicationController
     
     def destroy
         # Should enqueue a job for destroying the record
-        @application.destroy
+        ApplicationDeletionJob.perform_later(@application)
         render status: :ok
     end
 
@@ -31,7 +31,7 @@ class ChatApplicationsController < ApplicationController
     private
 
     def find_application
-        @application = ChatApplication.find_by_token(params[:token])
+        @application = ChatApplication.find_by_token!(params[:token])
     end
 
     def application_params

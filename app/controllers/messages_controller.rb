@@ -17,8 +17,7 @@ class MessagesController < ApplicationController
     end
     
     def destroy
-        # Should enqueue a job for destroying the record
-        @message.destroy
+        MessageDeletionJob.perform_later(@message)
         render status: :ok
     end
 
