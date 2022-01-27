@@ -28,6 +28,8 @@ class ChatApplicationsController < ApplicationController
         render status: :ok
     end
 
+    private
+
     def find_application
         @application = ChatApplication.find_by_token(params[:token])
     end

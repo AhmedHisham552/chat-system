@@ -3,12 +3,10 @@ class ChatsController < ApplicationController
     before_action :find_chat, only: [:show, :update, :destroy]
 
     def index
-        render json: @application.chats.as_json(:except=>:id)
+        render json: @application.chats.as_json(except: [:id,:chat_application_id])
     end
 
     def create
-        # Here we should cache the last number of a chat in a specific application and then enqueue a job to create a chat with an incremented number and then update cache to avoid race condition on chat_number
-        # Redis table: {token,last_chat_number}
         creationChatNumber = new_chat_number
         ChatCreationJob.perform_later(@application[:id],creationChatNumber)
         render json: {chatNumber: creationChatNumber}, status: :created
@@ -29,6 +27,8 @@ class ChatsController < ApplicationController
         # @chat.update(application_params)
         render status: :ok
     end
+
+    private
 
     def find_application
         @application = ChatApplication.find_by_token!(params[:token])
