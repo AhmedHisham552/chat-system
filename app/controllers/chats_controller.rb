@@ -17,13 +17,12 @@ class ChatsController < ApplicationController
     end
     
     def destroy
-        ChatDeletionJob.perform_later(@chat)
+        EntityDeletionJob.perform_later(@chat)
         render status: :ok
     end
 
     def update
-        # Should enqueue a job for updating record
-        # @chat.update(application_params)
+        EntityUpdateJob.perform_later(@chat,{name: chat_params[:name]})
         render status: :ok
     end
 
@@ -34,7 +33,7 @@ class ChatsController < ApplicationController
     end
 
     def find_chat
-        @chat = Chat.find(application_chat_number: params[:chat_number], chat_application_id: @application[:id])
+        @chat=Chat.where({application_chat_number:params[:chatNumber],chat_application_id:@application[:id]}).last
     end
 
     def new_chat_number
@@ -44,6 +43,6 @@ class ChatsController < ApplicationController
     end
 
     def chat_params
-        request.parameters.slice(:token,:chatNumber)
+        request.parameters.slice(:token,:chatNumber,:name)
     end
 end

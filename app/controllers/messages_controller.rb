@@ -17,13 +17,12 @@ class MessagesController < ApplicationController
     end
     
     def destroy
-        MessageDeletionJob.perform_later(@message)
+        EntityDeletionJob.perform_later(@message)
         render status: :ok
     end
 
     def update
-        # Should enqueue a job for updating record
-        # @message.update(body: message_params[:body])
+        EntityUpdateJob.perform_later(@message,{body: message_params[:body]})
         render status: :ok
     end
 
@@ -39,7 +38,7 @@ class MessagesController < ApplicationController
     end
 
     def find_message
-        @message = Message.find!(chat_message_number: params[:message_number], chat_id: @chat[:id])
+        @message = Message.where({chat_message_number: message_params[:messageNumber], chat_id: @chat[:id]}).last!
     end
 
     def new_message_number

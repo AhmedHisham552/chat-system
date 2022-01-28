@@ -17,14 +17,12 @@ class ChatApplicationsController < ApplicationController
     end
     
     def destroy
-        # Should enqueue a job for destroying the record
-        ApplicationDeletionJob.perform_later(@application)
+        EntityDeletionJob.perform_later(@application)
         render status: :ok
     end
 
     def update
-        # Should enqueue a job for updating record
-        @application.update(application_params)
+        EntityUpdateJob.perform_later(@application,application_params)
         render status: :ok
     end
 

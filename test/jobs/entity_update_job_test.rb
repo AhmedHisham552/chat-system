@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MessageDeletionJobTest < ActiveJob::TestCase
+class EntityUpdateJobTest < ActiveJob::TestCase
   # test "the truth" do
   #   assert true
   # end
