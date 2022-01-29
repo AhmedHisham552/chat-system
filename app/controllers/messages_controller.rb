@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-    before_action :find_application_chat, only: [:show, :update, :create, :index, :search]
+    before_action :find_application_chat
     before_action :find_message, only: [:show, :update, :destroy]
 
     def index
@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
     private
 
     def find_application_chat
-        @chat = Chat.joins(:chat_application).where("chat_applications.token =? AND application_chat_number=?",message_params[:token], message_params[:chatNumber]).last!
+        @chat = Chat.joins(:chat_application).where(application_chat_number: message_params[:chatNumber], chat_applications: { token: message_params[:token] }).last!
     end
 
     def find_message

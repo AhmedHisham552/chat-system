@@ -358,3 +358,325 @@ Running via Spring preloader in process 30681
 /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
 Running via Spring preloader in process 8086
 Running via Spring preloader in process 8091
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/associations/builder/association.rb:131:in `check_dependent_options': The :dependent option must be one of [:destroy, :delete_all, :nullify, :restrict_with_error, :restrict_with_exception], but is :1 (ArgumentError)
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/associations/builder/association.rb:83:in `define_callbacks'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/associations/builder/collection_association.rb:15:in `define_callbacks'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/associations/builder/association.rb:33:in `build'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/associations.rb:1369:in `has_many'
+	from /home/ahmed/Desktop/chatsystem/app/models/chat_application.rb:2:in `<class:ChatApplication>'
+	from /home/ahmed/Desktop/chatsystem/app/models/chat_application.rb:1:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:476:in `block in load_file'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:661:in `new_constants_in'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:475:in `load_file'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:373:in `block in require_or_load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies/interlock.rb:13:in `loading'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:37:in `load_interlock'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:356:in `require_or_load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:510:in `load_missing_constant'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:195:in `const_missing'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:542:in `load_missing_constant'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:195:in `const_missing'
+	from /home/ahmed/Desktop/chatsystem/app/tasks/count_synchronizer.rb:12:in `sync_chats_count'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands/runner/runner_command.rb:41:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands/runner/runner_command.rb:41:in `eval'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands/runner/runner_command.rb:41:in `perform'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/thor-1.2.1/lib/thor/command.rb:27:in `run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/thor-1.2.1/lib/thor/invocation.rb:127:in `invoke_command'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/thor-1.2.1/lib/thor.rb:392:in `dispatch'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/command/base.rb:69:in `perform'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/command.rb:46:in `invoke'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands.rb:18:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `block in require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `require'
+	from /home/ahmed/Desktop/chatsystem/bin/rails:9:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `block in load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `load'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from -e:1:in `<main>'
+Running via Spring preloader in process 15271
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 15275
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 21994
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 22000
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 24305
+Running via Spring preloader in process 24310
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 27067
+Running via Spring preloader in process 27072
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 30093
+Running via Spring preloader in process 30088
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 32208
+Running via Spring preloader in process 32204
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:511:in `load_missing_constant': Unable to autoload constant CountSynchronizer, expected /home/ahmed/Desktop/chatsystem/app/tasks/count_synchronizer.rb to define it (LoadError)
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:195:in `const_missing'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands/runner/runner_command.rb:41:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands/runner/runner_command.rb:41:in `eval'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands/runner/runner_command.rb:41:in `perform'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/thor-1.2.1/lib/thor/command.rb:27:in `run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/thor-1.2.1/lib/thor/invocation.rb:127:in `invoke_command'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/thor-1.2.1/lib/thor.rb:392:in `dispatch'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/command/base.rb:69:in `perform'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/command.rb:46:in `invoke'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands.rb:18:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `block in require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `require'
+	from /home/ahmed/Desktop/chatsystem/bin/rails:9:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `block in load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `load'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from -e:1:in `<main>'
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:511:in `load_missing_constant': Unable to autoload constant CountSynchronizer, expected /home/ahmed/Desktop/chatsystem/app/tasks/count_synchronizer.rb to define it (LoadError)
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:195:in `const_missing'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands/runner/runner_command.rb:41:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands/runner/runner_command.rb:41:in `eval'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands/runner/runner_command.rb:41:in `perform'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/thor-1.2.1/lib/thor/command.rb:27:in `run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/thor-1.2.1/lib/thor/invocation.rb:127:in `invoke_command'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/thor-1.2.1/lib/thor.rb:392:in `dispatch'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/command/base.rb:69:in `perform'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/command.rb:46:in `invoke'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/commands.rb:18:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `block in require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `require'
+	from /home/ahmed/Desktop/chatsystem/bin/rails:9:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `block in load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `load'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from -e:1:in `<main>'
+Running via Spring preloader in process 6584
+Running via Spring preloader in process 6589
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 19226
+Running via Spring preloader in process 19231
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/redis-4.5.1/lib/redis.rb:63:in `initialize': undefined method `key?' for "redis://localhost:6379/0":String (NoMethodError)
+	from /home/ahmed/Desktop/chatsystem/config/initializers/redis.rb:4:in `new'
+	from /home/ahmed/Desktop/chatsystem/config/initializers/redis.rb:4:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `block in load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/engine.rb:663:in `block in load_config_initializer'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/notifications.rb:170:in `instrument'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/engine.rb:662:in `load_config_initializer'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/engine.rb:620:in `block (2 levels) in <class:Engine>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/engine.rb:619:in `each'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/engine.rb:619:in `block in <class:Engine>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:32:in `instance_exec'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:32:in `run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:61:in `block in run_initializers'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:422:in `block (2 levels) in each_strongly_connected_component_from'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:421:in `block in each_strongly_connected_component_from'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:50:in `each'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:50:in `tsort_each_child'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:415:in `call'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:415:in `each_strongly_connected_component_from'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:60:in `run_initializers'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/application.rb:361:in `initialize!'
+	from /home/ahmed/Desktop/chatsystem/config/environment.rb:5:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application.rb:106:in `preload'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application.rb:157:in `serve'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application.rb:145:in `block in run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application.rb:139:in `loop'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application.rb:139:in `run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application/boot.rb:19:in `<top (required)>'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from -e:1:in `<main>'
+redis://localhost:6379/0
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/redis-4.5.1/lib/redis.rb:63:in `initialize': undefined method `key?' for "redis://localhost:6379/0":String (NoMethodError)
+	from /home/ahmed/Desktop/chatsystem/config/initializers/redis.rb:4:in `new'
+	from /home/ahmed/Desktop/chatsystem/config/initializers/redis.rb:4:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `block in load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/engine.rb:663:in `block in load_config_initializer'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/activesupport-5.2.6/lib/active_support/notifications.rb:170:in `instrument'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/engine.rb:662:in `load_config_initializer'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/engine.rb:620:in `block (2 levels) in <class:Engine>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/engine.rb:619:in `each'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/engine.rb:619:in `block in <class:Engine>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:32:in `instance_exec'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:32:in `run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:61:in `block in run_initializers'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:422:in `block (2 levels) in each_strongly_connected_component_from'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:421:in `block in each_strongly_connected_component_from'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:50:in `each'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:50:in `tsort_each_child'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:415:in `call'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:415:in `each_strongly_connected_component_from'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:347:in `each'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:347:in `call'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/initializable.rb:60:in `run_initializers'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/railties-5.2.6/lib/rails/application.rb:361:in `initialize!'
+	from /home/ahmed/Desktop/chatsystem/config/environment.rb:5:in `<main>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/bootsnap-1.10.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application.rb:106:in `preload'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application.rb:157:in `serve'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application.rb:145:in `block in run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application.rb:139:in `loop'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application.rb:139:in `run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/application/boot.rb:19:in `<top (required)>'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from -e:1:in `<main>'
+redis://localhost:6379/0
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 14811
+Running via Spring preloader in process 14806
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 23220
+Running via Spring preloader in process 23200
+bundler: failed to load command: bin/rails (bin/rails)
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/client/run.rb:140:in `connect_to_application': Error connecting to Spring server (RuntimeError)
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/client/run.rb:67:in `run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/client/run.rb:42:in `warm_run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/client/run.rb:35:in `call'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/client/rails.rb:24:in `call'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `load'
+	from /home/ahmed/.rvm/gems/ruby-2.7.1/gems/spring-2.1.1/lib/spring/binstub.rb:11:in `<top (required)>'
+	from /home/ahmed/Desktop/chatsystem/bin/spring:15:in `require'
+	from /home/ahmed/Desktop/chatsystem/bin/spring:15:in `<top (required)>'
+	from bin/rails:3:in `load'
+	from bin/rails:3:in `<top (required)>'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/bundler/cli/exec.rb:58:in `load'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/bundler/cli/exec.rb:58:in `kernel_load'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/bundler/cli/exec.rb:23:in `run'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/bundler/cli.rb:479:in `exec'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/bundler/vendor/thor/lib/thor.rb:392:in `dispatch'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/bundler/cli.rb:31:in `dispatch'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/bundler/vendor/thor/lib/thor/base.rb:485:in `start'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/bundler/cli.rb:25:in `start'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/bundler-2.2.33/exe/bundle:49:in `block in <top (required)>'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/site_ruby/2.7.0/bundler/friendly_errors.rb:103:in `with_friendly_errors'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/bundler-2.2.33/exe/bundle:37:in `<top (required)>'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/bin/bundle:23:in `load'
+	from /home/ahmed/.rvm/rubies/ruby-2.7.1/bin/bundle:23:in `<main>'
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/actionpack-5.2.6/lib/action_dispatch/middleware/stack.rb:37: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/actionpack-5.2.6/lib/action_dispatch/middleware/static.rb:111: warning: The called method `initialize' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/mysql/database_statements.rb:12: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/connection_adapters/abstract/query_cache.rb:95: warning: The called method `select_all' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+/home/ahmed/.rvm/gems/ruby-2.7.1/gems/activemodel-5.2.6/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 28765
+Running via Spring preloader in process 28760
