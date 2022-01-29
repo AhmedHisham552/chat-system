@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
     end
 
     def create
-        creationMessageNumber = new_message_number
+        creationMessageNumber = message_id_generator
         MessageCreationJob.perform_later(@chat[:id],creationMessageNumber,message_params[:body])
         render json: {messageNumber: creationMessageNumber}, status: :created
     end
@@ -41,10 +41,8 @@ class MessagesController < ApplicationController
         @message = Message.where({chat_message_number: message_params[:messageNumber], chat_id: @chat[:id]}).last!
     end
 
-    def new_message_number
-        REDIS.multi do |transaction|
-            transaction.incr message_params[:token]+"/"+@chat[:application_chat_number].to_s
-        end [0]
+    def message_id_generator
+        REDIS.incr message_params[:token]+":"+@chat[:application_chat_number].to_s
     end
 
     def message_params

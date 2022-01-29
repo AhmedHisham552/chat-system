@@ -1,5 +1,5 @@
 class ChatsController < ApplicationController
-    before_action :find_application, only: [:show, :update, :create, :index]
+    before_action :find_application
     before_action :find_chat, only: [:show, :update, :destroy]
 
     def index
@@ -7,7 +7,7 @@ class ChatsController < ApplicationController
     end
 
     def create
-        creationChatNumber = new_chat_number
+        creationChatNumber = chat_id_generator
         ChatCreationJob.perform_later(@application[:id],creationChatNumber)
         render json: {chatNumber: creationChatNumber}, status: :created
     end
@@ -18,6 +18,7 @@ class ChatsController < ApplicationController
     
     def destroy
         EntityDeletionJob.perform_later(@chat)
+        @chat.redis_cleanup
         render status: :ok
     end
 
@@ -33,13 +34,11 @@ class ChatsController < ApplicationController
     end
 
     def find_chat
-        @chat=Chat.where({application_chat_number:params[:chatNumber],chat_application_id:@application[:id]}).last
+        @chat=Chat.where({application_chat_number:params[:chatNumber],chat_application_id:@application[:id]}).last!
     end
 
-    def new_chat_number
-        REDIS.multi do |transaction|
-            transaction.incr @application.token
-        end [0]
+    def chat_id_generator
+        REDIS.incr @application.token
     end
 
     def chat_params

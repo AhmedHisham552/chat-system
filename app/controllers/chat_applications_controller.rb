@@ -18,6 +18,7 @@ class ChatApplicationsController < ApplicationController
     
     def destroy
         EntityDeletionJob.perform_later(@application)
+        @application.redis_cleanup
         render status: :ok
     end
 
