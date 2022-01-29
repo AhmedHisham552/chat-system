@@ -1,24 +1,46 @@
-# README
+##### Prerequisites
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The setups steps expect following tools installed on the system.
 
-Things you may want to cover:
+- Docker
+- docker-compose
 
-* Ruby version
+### 1. Check out the repository
 
-* System dependencies
+```bash
+git clone git@github.com:AhmedHisham552/chat-system.git
+```
 
-* Configuration
 
-* Database creation
+### 2. Run the containerized application
 
-* Database initialization
+Run the following commands to start the app along with the necessary containers
 
-* How to run the test suite
+```bash
+$ docker-compose up
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### 3. To run the specs use
 
-* Deployment instructions
+```bash
+$ rspec spec
+```
 
-* ...
+And now you can hit the endpoints with the URL http://localhost:3000
+
+## Databases
+
+Used mysql as the main datastore and a persisted redis database for id generation and sidekiq job queues
+
+
+## Handling race conditions in id generation
+
+As the id generation is handled by a redis datastore, the redis operation are atomic as redis is single threaded so it ensures that if any instances of the app is distributed on multiple servers there will be no race conditions. the redis db is persisted with an AOF such that if any outage occurs to the redis node, the system can recover and continue it's operation normally for id generation
+
+## Job queues
+
+Minimized writing to mysql directly by using ActiveJobs with sidekiq adapter in the endpoints that require creation, updating or deleting so that the app can keep serving requests while DB operations are done in the background
+
+## Periodic tasks
+
+Added synchronization of count columns as a cron job using whenever gem such that it gets updated every 45 minutes instead of incrementing the counts with every insertion as the columns are not needed to be live to reduce the amount of queries done against the DB.
