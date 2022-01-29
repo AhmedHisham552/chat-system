@@ -1,5 +1,5 @@
 module CountSynchronizer
-    def CountSynchronizer.sync_messages_count
+    def self.sync_messages_count
         Chat.includes(:messages).find_in_batches do |chats|
             chats.each do |chat|
                 chat.update_messages_count!
@@ -8,7 +8,7 @@ module CountSynchronizer
         end
     end
 
-    def CountSynchronizer.sync_chats_count
+    def self.sync_chats_count
         ChatApplication.includes(:chats).find_in_batches do |apps|
             apps.each do |app|
                 app.update_chats_count!
