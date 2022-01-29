@@ -21,7 +21,7 @@
 set :output, "./cron_log.log"
 set :environment, "development"
 
-every 45.minutes do
+every 1.minutes do
     runner "::CountSynchronizer.sync_chats_count"
     runner "::CountSynchronizer.sync_messages_count"
 end
