@@ -19,21 +19,12 @@ RSpec.describe MessagesController, type: :controller do
                 end
             end
 
-            context "one message exists" do
+            context "message exists" do
                 let!(:message){FactoryBot.create(:message,chat: chat)}
                 it "should return the message" do
                     get :index,params:{token: chat_application.token,chatNumber: chat.application_chat_number}
                     expect(response.status).to eq 200
                     expect(response.body).to eq [{chat_message_number: message.chat_message_number,body: message.body,created_at: message.created_at,updated_at: message.updated_at,}].to_json
-                end
-            end
-    
-            context "multiple messages exist" do
-                let!(:messages) {FactoryBot.build_list(:message,5,chat:chat)}
-                it "should return array of length 5" do
-                    get :index,params:{token: chat_application.token,chatNumber: chat.application_chat_number}
-                    expect(response.status).to eq 200
-                    expect(response.body.length).to eq 2
                 end
             end
         end
@@ -65,7 +56,6 @@ RSpec.describe MessagesController, type: :controller do
             let!(:chat) { FactoryBot.create(:chat, chat_application: chat_application) }
             let!(:message){FactoryBot.create(:message,chat: chat)}
             it "should enqueue one job" do
-                puts chat.application_chat_number,chat_application.token
                 expect {delete :destroy,params:{token: chat_application.token,chatNumber: chat.application_chat_number,messageNumber: message.chat_message_number}}.to enqueue_job(EntityDeletionJob)
             end
         end
