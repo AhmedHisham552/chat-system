@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
     end
 
     def search
-        @matches = Message.search(search_query)
+        @matches = Message.search(@chat.search_query_generator(message_params[:query]))
         render json: filter_es_response(@matches), status: :ok
     end
 
@@ -46,29 +46,7 @@ class MessagesController < ApplicationController
     end
 
     def message_params
-        request.parameters.slice(:body,:token,:chatNumber,:messageNumber)
-    end
-
-    def search_query
-        {
-            _source: [:chat_message_number,:body, :created_at],
-            query: {
-                bool: {
-                    must: [
-                    {
-                        match: {
-                            chat_id: @chat[:id]
-                        }
-                    },
-                    {
-                        match: {
-                            body: params[:query]
-                        }
-                    }
-                    ]
-                }
-            }
-        }
+        request.parameters.slice(:body,:token,:chatNumber,:messageNumber,:query)
     end
 
     def filter_es_response(res)
